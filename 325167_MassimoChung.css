@@ -1,0 +1,84 @@
+:root {
+  --bc: #38AB27;
+  --tc: #eee;
+  --tc-s: #ffffff;
+  --fm: "Cascadia Code PL", "Andale Mono", monospace;
+  --fw-l: 500;
+  --fw-b: 700;
+}
+
+*,
+:root,
+html,
+body {
+  font-family: var(--fm);
+  font-weight: var(--fw-b);
+  background-color: var(--bc);
+  color: var(--tc);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 2rem;
+  height: calc(98vh - 6rem);
+  justify-content:space-around;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+img {
+  width: 17rem;
+  height: 17rem;
+  object-fit:cover;
+  box-shadow: 5px 5px 10px #000000;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  transition: scale 1000ms ease;
+}
+
+p {
+  font-size: 35px;
+}
+h1 {
+  font-size: 50px;
+  color: var(--tc-s);
+  font-weight: var(--fw-b);
+}
+
+.portada {
+  position: relative;
+  cursor: pointer;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+
+.portada:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portada:hover img {
+  scale: 1.1;
+}
+span {
+  position: absolute;
+  top: -4rem;
+  padding: 0.3rem;
+  border: 0.3rem solid var(--tc-s);
+  color: var(--tc);
+  opacity: 1;
+  transform: translateY(2rem);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.enmedio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
