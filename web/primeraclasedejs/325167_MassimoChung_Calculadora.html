@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+    <h1 id="titulo">titulo de la calculadora</h1>
+
+    <input type="number" class="input1" id="num1">
+    <input type="sumbit" class="button" value="+" onclick="sumar()">
+    <input type="sumbit" class="button" value="-" onclick="restar()">
+    <input type="sumbit" class="button" value="*" onclick="multi()">
+    <input type="sumbit" class="button" value="/" onclick="dividir()">
+
+    <input type="number" class="input1" id="num2">
+    <h2>=</h2>
+    <input type="text" class="res" id="res">
+
+
+
+</body>
+
+<script>
+
+    function sumar() {
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        num1=parseInt(num1);
+        num2=parseInt(num2);
+
+        var resultado=num1+num2;
+        var cajitasres= document.getElementById("res");
+        cajitasres.value=resultado
+    }
+
+    function restar() {
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        num1=parseInt(num1);
+        num2=parseInt(num2);
+
+        var resultado=num1-num2;
+        var cajitasres= document.getElementById("res");
+        cajitasres.value=resultado
+    }
+
+    function multi() {
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        num1=parseInt(num1);
+        num2=parseInt(num2);
+
+        var resultado=num1*num2;
+        var cajitasres= document.getElementById("res");
+        cajitasres.value=resultado
+    }
+
+    function dividir() {
+        var num1=document.getElementById("num1").value;
+        var num2=document.getElementById("num2").value;
+        num1=parseInt(num1);
+        num2=parseInt(num2);
+
+        var resultado=num1/num2;
+        var cajitasres= document.getElementById("res");
+        cajitasres.value=resultado
+    }
+
+</script>
+
+
+</html>
